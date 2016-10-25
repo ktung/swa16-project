@@ -22,7 +22,7 @@
     <tr class="menu">
         <td class="cote">&nbsp;</td>
         <td style="text-align: center">
-            <nav class="nav"><a class="btn btn-danger" type="button" href="">Home</a><a class="btn btn-danger" type="button" onclick=''>Sell</a><a 	class="btn btn-danger" type="button" onclick=''>Un autre Onglet</a><a class="btn btn-danger" type="button" onclick=''>Cart</a></nav></td>
+            <nav class="nav"><a class="btn btn-danger" type="button" href="">Accueil</a><a class="btn btn-danger" type="button" onclick=''>Nos chambres</a><a 	class="btn btn-danger" type="button" onclick=''>Livre d'Or</a><a class="btn btn-danger" type="button" onclick=''>Connexion</a></nav></td>
         <td class="cote">&nbsp;</td>
     </tr>
     <tr>        <td class="cote">&nbsp;</td>

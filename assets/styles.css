@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: yellow;
-	background-image: url('../pictures/back.png');
+	background-image: url('../pictures/bck.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	margin: 0;
 	padding: 0;
 	color: #FFF;
