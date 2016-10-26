@@ -3,7 +3,8 @@ body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-image: url('../pictures/bck.jpeg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
 	margin: 0;
 	padding: 0;
 	color: #FFF;
@@ -171,4 +172,9 @@ body {
 	height:60%;
 	bottom:10px;
 
+}
+
+img {
+	margin : 20px;
+	width : 500px;
 }
