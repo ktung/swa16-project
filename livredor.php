@@ -18,7 +18,10 @@ $messages=file_get_contents($file);
             var input=document.getElementById("message").value;
 
 
-            var url = "http://local.hotelo.dev:8888/livredorleavemessage.php?message="+input;
+            var url =" <?
+                $monUrl = "http://".$_SERVER['HTTP_HOST'];
+                echo $monUrl;
+                ?>/livredorleavemessage.php?message="+input;
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open('GET',url, true);
             xmlhttp.onreadystatechange = callback;
