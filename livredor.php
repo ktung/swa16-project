@@ -20,10 +20,8 @@ $messages=file_get_contents($file);
 
 
 
-            var url =" <?
-                $monUrl = "http://".$_SERVER['HTTP_HOST'];
-                echo $monUrl;
-                ?>/livredorleavemessage.php?message="+message+"&client="+client;
+            var url =  window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
+            url += "/livredorleavemessage.php?message="+message+"&client="+client;
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open('GET',url, true);
             xmlhttp.onreadystatechange = callback;
