@@ -15,19 +15,25 @@ $messages=file_get_contents($file);
 
                 //show.innerHTML= xmlhttp.responseText;
             } ;
-            var input=document.getElementById("message").value;
+            var message=document.getElementById("message").value;
+            var client=document.getElementById("client").value;
+
 
 
             var url =" <?
                 $monUrl = "http://".$_SERVER['HTTP_HOST'];
                 echo $monUrl;
-                ?>/livredorleavemessage.php?message="+input;
+                ?>/livredorleavemessage.php?message="+message+"&client="+client;
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open('GET',url, true);
             xmlhttp.onreadystatechange = callback;
             xmlhttp.send(null);
             document.getElementById("message").value="";
+            document.getElementById("client").value="";
 
+            alert("Merci pour votre avis même si ça ne nous interesse pas tellement...");
+
+            window.location.reload();
 
         }
     </script>
@@ -41,6 +47,8 @@ $messages=file_get_contents($file);
             <h1>Livre d'or</h1><br/>
             <p>Dites nous ce que vous pensez de notre superbe hotel</p>
             <br/>
+            De :<br><input  id="client" ><br><br>
+
             Message :<br><input  id="message" ><br><br>
             <button onclick= 'save()' >Envoyer !</button>
             <br><br>
