@@ -6,8 +6,6 @@ function clearGuestbook(){
     var xmlhttp = new XMLHttpRequest();
     var url =  window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
     url += "/nettoyerlivredor.php";
-    console.log(url);
-
 
     var callback = function () {
         document.getElementById("answerClearGuestbook").innerHTML = this.responseText;
