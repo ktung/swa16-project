@@ -47,6 +47,10 @@ $messages=file_get_contents($file);
             <h1>Livre d'or</h1><br/>
             <p>Dites nous ce que vous pensez de notre superbe hotel</p>
             <br/>
+            <!-- MESSAGE A DESTINATION DES HACKERS-->
+            <!-- Si à cause des valeurs rentrées plus rien ne marche vous pouvez utiliser le cheat:
+            dans le input client vous tapez delete et dans l'input message vous tapez delete, vous supprimerez
+            donc l'ensemble des messages stockés et donc ceux qui posent problèmes -->
             De :<br><input  id="client" ><br><br>
 
             Message :<br><input  id="message" ><br><br>
