@@ -7,14 +7,17 @@
     <meta charset="UTF-8">
     <?php include('includes.inc.php'); ?>
     <script>
+        function forgotPassword() {
+            window.location = "mdpoublie.php"
+        }
+
         function connect(){
             var email = document.getElementById("email").value;
             var pwd = document.getElementById("pwd").value;
             if (email && pwd) {
                 var callback = function () {
-                    if (200 === xmlhttp.status) {
+                    if (200 === xmlhttp.status && xmlhttp.readyState == 4) {
                         if(xmlhttp.responseText === "ok") {
-                            console.log(xmlhttp.responseText);
                             document.getElementById("email").value = "";
                             document.getElementById("pwd").value = "";
                             //Chargement token
@@ -52,6 +55,7 @@
 
             Mot de passe :<br><input  id="pwd" ><br><br>
             <button onclick= 'connect()' >Se connecter</button>
+            <button onclick='forgotPassword()'>Mot de passe oublié</button>
             <br><br>
             <h1>Vous n'avez pas encore de compte ?</h1><br/>
             <button onclick= 'goToSubscribe()' >S'inscrire</button>
