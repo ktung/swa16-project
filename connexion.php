@@ -31,8 +31,8 @@
                 url += "/connecterUtilisateur.php?mail=" + email + "&pwd=" + pwd;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
-                xmlhttp.send(null);
                 xmlhttp.onreadystatechange = callback;
+                xmlhttp.send(null);
             } else {
                 alert("Veuillez saisir un mail et un mot de passe");
                 //document.getElementById("cadrePrincipal").innerHTML = "\<h1\>Vous êtes déjà connecté\<\/h1\>";

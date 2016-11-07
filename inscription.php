@@ -6,6 +6,17 @@
     <?php include('includes.inc.php'); ?>
     <script>
         function subscribe() {
+            var callback = function() {
+                if (200 === xmlhttp.status && xmlhttp.readyState == 4) {
+                    if (xmlhttp.responseText === "existing") {
+                        alert("Compte déjà existant avec ce mail");
+                    } else {
+                        document.getElementById("email").value = "";
+                        document.getElementById("pwd").value = "";
+                        window.location = "index.php";
+                    }
+                }
+            };
             var mail=document.getElementById("email").value;
             var password=document.getElementById("pwd").value;
             if (mail && password) {
@@ -13,10 +24,8 @@
                 url += "/inscrireUtilisateur.php?mail=" + mail + "&pwd=" + password;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
+                xmlhttp.onreadystatechange = callback;
                 xmlhttp.send(null);
-                document.getElementById("email").value = "";
-                document.getElementById("pwd").value = "";
-                window.location = "index.php";
             } else {
                 alert("Veuillez saisir un mail et un password");
             }
