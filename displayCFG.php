@@ -22,20 +22,13 @@
                 $filename = './install/config.txt';
                 if (strpos(file_get_contents($filename),"activated") !== false) : ?>
 
-                        <h1>Management</h1><br/>
-                        <p>En tant que manager, vous pouvez ici gérer votre hôtel.</p>
-                        <br/>
-                        <button onclick="clearGuestbook()">Effacer tous les messages du livre d'or</button>
-                        <br />
-                        <div id= answerClearGuestbook></div>
-                        <br />
-                        <button onclick="manageReservations()">Gérer les réservations</button>
-                        <br />
-                        <div id= answerManageReservations></div>
+                        <h1>Account Management</h1><br/>
+                        <p>Votre nom de compte admin est "petitmalin".</p>
+                        <p>Vous êtes le seul à disposer de votre mot de passe.</p>
                         <br />
                         
                 <?php  else : ?>
-                    <p>Cette fonctionnalité n'est pas activée. </p>
+                    <p>Vous ne pouvez pas afficher cette page. </p>
                 <?php endif; ?>
         </td>
         <td class="cote">&nbsp;</td>

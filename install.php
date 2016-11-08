@@ -14,10 +14,10 @@
            <p> Bievenue sur la page d'installation de votre propre site de vente d'hotel </p>
 	<p> <a href = "./install/phpinfo.php"> Accedez aux informations php </a></p>
 
-    <p> <a href = "./manage.php"> Accedez a l'outil de management de l'hotel </a></p>
+    <p> <a href = "./displayCFG.php"> Accedez aux informations de configuration actuelle </a></p>
 
 <form method="post" action="install/config.php">
-    <input type="submit" value="Activate Extra Functionnalities!" />
+    <input type="submit" value="Activez la totalité des fonctionnalités" />
 </form>
         </td>
         <td class="cote">&nbsp;</td>
