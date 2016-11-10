@@ -21,7 +21,7 @@
                             document.getElementById("pseudo").value = "";
                             document.getElementById("pwd").value = "";
                             //Chargement token
-                            window.location = "index.php";
+                            window.location = "index.php?pseudo="+pseudo;
                         } else if(xmlhttp.responseText === "ko") {
                             alert("Aucun compte pour ce pseudo et ce mot de passe!");
                         }
