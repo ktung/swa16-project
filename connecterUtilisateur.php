@@ -7,7 +7,7 @@
     $row = $res->fetch_object();
     if($row->pseudo) {
         $result = "ok";
-        setcookie("token", $row->token);
+        setcookie("token", $row->token, time() + 7*24*60*60);
     } else {
         $result = "ko";
     }
