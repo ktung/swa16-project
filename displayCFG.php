@@ -23,7 +23,7 @@
                 if (strpos(file_get_contents($filename),"activated") !== false) : ?>
 
                         <h1>Account Management</h1><br/>
-                        <p>Votre nom de compte admin est "petitmalin".</p>
+                        <p>Votre nom de compte admin est "secretholder".</p>
                         <p>Vous êtes le seul à disposer de votre mot de passe.</p>
                         <br />
                         
