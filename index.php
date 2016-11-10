@@ -27,7 +27,7 @@
 <script type="text/javascript">
 if (window.location.href.indexOf("pseudo=")) {
     var pseudo_position = location.href.indexOf("pseudo=");
-    var pseudo = location.href.substring(pseudo_position+5);
+    var pseudo = location.href.substring(pseudo_position+7);
     document.getElementById("bienvenue").innerHTML=" Hello, " + pseudo + "!";
     console.log("ok");
 }
