@@ -12,29 +12,29 @@
         }
 
         function connect(){
-            var email = document.getElementById("email").value;
+            var pseudo = document.getElementById("pseudo").value;
             var pwd = document.getElementById("pwd").value;
-            if (email && pwd) {
+            if (pseudo && pwd) {
                 var callback = function () {
                     if (200 === xmlhttp.status && xmlhttp.readyState == 4) {
                         if(xmlhttp.responseText === "ok") {
-                            document.getElementById("email").value = "";
+                            document.getElementById("pseudo").value = "";
                             document.getElementById("pwd").value = "";
                             //Chargement token
                             window.location = "index.php";
                         } else if(xmlhttp.responseText === "ko") {
-                            alert("Aucun compte pour ce mail et ce mot de passe!");
+                            alert("Aucun compte pour ce pseudo et ce mot de passe!");
                         }
                     }
                 };
                 var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
-                url += "/connecterUtilisateur.php?mail=" + email + "&pwd=" + pwd;
+                url += "/connecterUtilisateur.php?pseudo=" + pseudo + "&pwd=" + pwd;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
                 xmlhttp.onreadystatechange = callback;
                 xmlhttp.send(null);
             } else {
-                alert("Veuillez saisir un mail et un mot de passe");
+                alert("Veuillez saisir un pseudo et un mot de passe");
                 //document.getElementById("cadrePrincipal").innerHTML = "\<h1\>Vous êtes déjà connecté\<\/h1\>";
             }
         }
@@ -51,7 +51,7 @@
         <td class="cote">&nbsp;</td>
         <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
             <h1>Connexion</h1><br/>
-            Courriel :<br><input  id="email" ><br><br>
+            Courriel :<br><input  id="pseudo" ><br><br>
 
             Mot de passe :<br><input  id="pwd" ><br><br>
             <button onclick= 'connect()' >Se connecter</button>

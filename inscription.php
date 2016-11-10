@@ -9,25 +9,25 @@
             var callback = function() {
                 if (200 === xmlhttp.status && xmlhttp.readyState == 4) {
                     if (xmlhttp.responseText === "existing") {
-                        alert("Compte déjà existant avec ce mail");
+                        alert("Compte déjà existant avec ce pseudo");
                     } else {
-                        document.getElementById("email").value = "";
+                        document.getElementById("pseudo").value = "";
                         document.getElementById("pwd").value = "";
                         window.location = "index.php";
                     }
                 }
             };
-            var mail=document.getElementById("email").value;
+            var pseudo=document.getElementById("pseudo").value;
             var password=document.getElementById("pwd").value;
-            if (mail && password) {
+            if (pseudo && password) {
                 var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
-                url += "/inscrireUtilisateur.php?mail=" + mail + "&pwd=" + password;
+                url += "/inscrireUtilisateur.php?pseudo=" + pseudo + "&pwd=" + password;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
                 xmlhttp.onreadystatechange = callback;
                 xmlhttp.send(null);
             } else {
-                alert("Veuillez saisir un mail et un password");
+                alert("Veuillez saisir un pseudo et un password");
             }
         }
     </script>
@@ -39,7 +39,7 @@
         <td class="cote">&nbsp;</td>
         <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
             <h1>Inscription</h1><br/>
-            Courriel :<br><input  id="email" ><br><br>
+            Courriel :<br><input  id="pseudo" ><br><br>
 
             Mot de passe :<br><input  id="pwd" ><br><br>
             <button onclick='subscribe()'>S'inscrire</button>

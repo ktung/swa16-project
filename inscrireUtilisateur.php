@@ -1,14 +1,14 @@
 <?php
-    $mail= $_GET["mail"];
+    $pseudo= $_GET["pseudo"];
     $password = $_GET["pwd"];
     $connexion = mysqli_connect("db4free.net", "rundlel", "booksmart2016", "booksmarttcd", "3306");
-    $queryCheckExisting = 'SELECT * from users WHERE mail="'.$mail.'"';
+    $queryCheckExisting = 'SELECT * from users WHERE pseudo="'.$pseudo.'"';
     $existing = $connexion->query($queryCheckExisting);
     $existingAccount = $existing->fetch_object();
     if ($existingAccount->password) {
         echo "existing";
     } else {
-        $query = 'INSERT INTO users (mail, password) VALUES ("' . $mail . '","' . $password . '")';
+        $query = 'INSERT INTO users (pseudo, password) VALUES ("' . $pseudo . '","' . $password . '")';
         $res = $connexion->query($query);
     }
 ?>
