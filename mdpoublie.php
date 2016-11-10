@@ -8,26 +8,26 @@
     <?php include('includes.inc.php'); ?>
     <script>
         function getForgottenPassword() {
-            var mail = document.getElementById("email").value;
-            if (mail) {
+            var pseudo = document.getElementById("pseudo").value;
+            if (pseudo) {
                 var callback = function () {
                     if (200 == xmlhttp.status && xmlhttp.readyState == 4) {
                         if (xmlhttp.responseText == "") {
-                            alert("Aucun compte associé à ce mail !");
+                            alert("Aucun compte associé à ce pseudo !");
                         } else {
                             alert("Mot de passe récupéré: " + xmlhttp.responseText);
-                            document.getElementById("email").value = "";
+                            document.getElementById("pseudo").value = "";
                         }
                     }
                 };
                 var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
-                url += "/recupererMdpUtilisateur.php?mail=" + mail;
+                url += "/recupererMdpUtilisateur.php?pseudo=" + pseudo;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
                 xmlhttp.send(null);
                 xmlhttp.onreadystatechange = callback;
             } else {
-                alert("Veuillez saisir un mail");
+                alert("Veuillez saisir un pseudo");
             }
         }
     </script>
@@ -39,7 +39,7 @@
         <td class="cote">&nbsp;</td>
         <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
             <h1>Mot de passe oublié</h1><br/>
-            Adresse mail :<br><input  id="email" ><br><br>
+            Pseudo :<br><input  id="pseudo" ><br><br>
             <button onclick='getForgottenPassword()'>Récupérer mot de passe</button>
         </td>
         <td class="cote">&nbsp;</td>

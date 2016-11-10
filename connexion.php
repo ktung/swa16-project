@@ -51,7 +51,7 @@
         <td class="cote">&nbsp;</td>
         <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
             <h1>Connexion</h1><br/>
-            Courriel :<br><input  id="pseudo" ><br><br>
+            Pseudo :<br><input  id="pseudo" ><br><br>
 
             Mot de passe :<br><input  id="pwd" ><br><br>
             <button onclick= 'connect()' >Se connecter</button>

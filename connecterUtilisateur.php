@@ -7,6 +7,7 @@
     $row = $res->fetch_object();
     if($row->pseudo) {
         $result = "ok";
+        setcookie("token", $row->token);
     } else {
         $result = "ko";
     }
