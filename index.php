@@ -28,8 +28,8 @@
 if (window.location.href.indexOf("pseudo=")) {
     var pseudo_position = location.href.indexOf("pseudo=");
     var pseudo = location.href.substring(pseudo_position+7);
-    $("#bienvenue").html("Bienvenue, " + pseudo + "!\n");
-    $("#cadrePrincipal").append('<a target="_blank" href="http://secuweb.neoskai.com/chambres.php">Cliquez ici pour continuer</a>');
+    $("#bienvenue").html(pseudo + "<br><br> BIENVENUE !");
+    $("#cadrePrincipal").append('<br><a target="_blank" href="http://secuweb.neoskai.com/chambres.php">Cliquez ici pour voir nos plus belles offres</a>');
 }
 </script>
 
