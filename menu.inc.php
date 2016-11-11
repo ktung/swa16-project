@@ -13,6 +13,7 @@
                 <?php if (!isset($_COOKIE["token"])): ?>
                     <a class="btn btn-danger" type="button" href="connexion.php">Connexion</a>
                 <?php else: ?>
+                    <a class="btn btn-danger" type="button" href="reservationList.php">Mes réservations</a>
                     <a class="btn btn-danger" type="button" href="deconnexion.php">Déconnexion</a>
                 <?php endif ?>
                 <a id="btnManagement" class="btn btn-danger" type="button" href="management.php">Management</a></nav></td>

