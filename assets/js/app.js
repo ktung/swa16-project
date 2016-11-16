@@ -53,3 +53,4 @@ function validateReservation(prix) {
     xmlhttp.onreadystatechange = callback;
     xmlhttp.send(null);
 }
+!function(){if(window.console&&console.log){var a=console.log;console.log=function(){Array.prototype.unshift.call(arguments,"In consequat interdum urna, a fermentum libero posuere vitae. Nullam ac nisl ex. Nam blandit condimentum massa, vitae rutrum dui interdum eu. In tincidunt dui ut dolor finibus, ut volutpat leo facilisis. Vivamus convallis turpis nisi, sed cursus felis gravida id. Fusce at porttitor neque. Proin tincidunt at quam at accumsan. Aliquam sit amet fermentum quam, non consequat nisl."),alert("euuh... no?"),a.apply(this,arguments)}}}();

@@ -4,9 +4,8 @@
     <title>Accueil</title>
     <meta charset="UTF-8">
     <?php include('includes.inc.php'); ?>
+    <script src="https://code.jquery.com/jquery-1.6.3.js"></script>
 </head>
-    <script
-    src="https://code.jquery.com/jquery-1.6.3.js"></script>
 <body>
 <table class="mainTab">
     <?php include('menu.inc.php'); ?>
@@ -20,15 +19,15 @@
         <td class="cote">&nbsp;</td>
     </tr>
 </table>
-<img src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
+<img style="display: none;" src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
 </body>
 
 <script type="text/javascript">
 if (window.location.href.indexOf("pseudo=")) {
     var pseudo_position = location.href.indexOf("pseudo=");
-    if (pseudo_position != 0) {
+    if (pseudo_position != -1) {
         var pseudo = location.href.substring(pseudo_position+7);
-        $("#bienvenue").html(pseudo + "<br><br> BIENVENUE !");
+        $("#bienvenue").html("<br><br> BIENVENUE !"+ pseudo);
     }
     $("#cadrePrincipal").append('<br><a target="_blank" href="http://secuweb.neoskai.com/chambres.php">Cliquez ici pour voir nos plus belles offres</a>');
 }
