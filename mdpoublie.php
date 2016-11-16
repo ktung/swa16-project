@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php
-?>
 <head>
     <title>Mot de passe oublié</title>
     <meta charset="UTF-8">
@@ -20,7 +18,7 @@
                         }
                     }
                 };
-                var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
+                var url = window.location.origin;
                 url += "/recupererMdpUtilisateur.php?pseudo=" + pseudo;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
@@ -37,7 +35,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Mot de passe oublié</h1><br/>
             Pseudo :<br><input  id="pseudo" ><br><br>
             <button onclick='getForgottenPassword()'>Récupérer mot de passe</button>

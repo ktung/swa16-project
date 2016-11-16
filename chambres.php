@@ -10,7 +10,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Nos chambres</h1><br/>
             <div align="left">
                 <h2>Suite confort</h2>

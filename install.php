@@ -25,7 +25,3 @@
 </table>
 </body>
 </html>
-
-<?php
-	
-?>

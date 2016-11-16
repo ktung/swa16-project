@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php
-
-?>
 <head>
     <title>Management</title>
     <meta charset="UTF-8">
@@ -17,7 +14,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <?php
                 $filename = './install/config.txt';
                 if (strpos(file_get_contents($filename),"activated") !== false) : ?>

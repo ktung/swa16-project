@@ -24,7 +24,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Vos réservations</h1><br/>
             <div align="center">
               <script>

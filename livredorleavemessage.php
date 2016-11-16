@@ -10,6 +10,3 @@ if($_GET["message"]=="delete" && $_GET["client"]=="delete")
  file_put_contents($file,$message,FILE_APPEND| LOCK_EX);
 
 }
- //$messages=file_get_contents($file);
- //echo  $messages;
- ?>

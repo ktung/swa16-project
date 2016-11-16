@@ -12,7 +12,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Bienvenue dans notre super Hotel</h1><br/>
             <p>Nous vous proposons un hotel atypique</p>
             <br/>

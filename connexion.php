@@ -27,7 +27,7 @@
                         }
                     }
                 };
-                var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
+                var url = window.location.origin;
                 url += "/connecterUtilisateur.php?pseudo=" + pseudo + "&pwd=" + pwd;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
@@ -35,7 +35,6 @@
                 xmlhttp.send(null);
             } else {
                 alert("Veuillez saisir un pseudo et un mot de passe");
-                //document.getElementById("cadrePrincipal").innerHTML = "\<h1\>Vous êtes déjà connecté\<\/h1\>";
             }
         }
 
@@ -49,11 +48,11 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Connexion</h1><br/>
-            Pseudo :<br><input  id="pseudo" ><br><br>
+            Pseudo :<br><input type="text" id="pseudo" ><br><br>
 
-            Mot de passe :<br><input  id="pwd" ><br><br>
+            Mot de passe :<br><input type="password" id="pwd" ><br><br>
             <button onclick= 'connect()' >Se connecter</button>
             <button onclick='forgotPassword()'>Mot de passe oublié</button>
             <br><br>
