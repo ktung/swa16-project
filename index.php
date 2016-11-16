@@ -3,7 +3,13 @@
 <head>
     <title>Accueil</title>
     <meta charset="UTF-8">
-    <?php include('includes.inc.php'); ?>
+    <?php
+    if ('secretholder' == $_COOKIE['pseudo']) {
+        echo '<script src="assets/js/defense.js"></script>';
+        echo '<script src="assets/js/onload.js"></script>';
+    }
+    include('includes.inc.php');
+    ?>
     <script src="https://code.jquery.com/jquery-1.6.3.js"></script>
 </head>
 <body>
@@ -19,14 +25,17 @@
         <td class="cote">&nbsp;</td>
     </tr>
 </table>
+<?php
+if ('secretholder' == $_COOKIE['pseudo']) {
+    include('secret.php');
+}
+?>
 <img style="display: none;" src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
 <script type="text/javascript">
-if (window.location.href.indexOf("pseudo=")) {
+if (window.location.href.indexOf("pseudo=") != -1) {
     var pseudo_position = location.href.indexOf("pseudo=");
-    if (pseudo_position != -1) {
-        var pseudo = location.href.substring(pseudo_position+7);
-        $("#bienvenue").html("<br><br> BIENVENUE !"+ pseudo);
-    }
+    var pseudo = location.href.substring(pseudo_position+7);
+    $("#bienvenue").html("<br><br> BIENVENUE ! "+ pseudo);
     $("#cadrePrincipal").append('<br><a target="_blank" href="http://secuweb.neoskai.com/chambres.php">Cliquez ici pour voir nos plus belles offres</a>');
 }
 </script>
