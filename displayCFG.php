@@ -4,9 +4,6 @@
     <title>Management</title>
     <meta charset="UTF-8">
     <?php include('includes.inc.php'); ?>
-    <script>
-
-    </script>
 </head>
 <body>
 
