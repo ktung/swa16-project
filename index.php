@@ -32,7 +32,7 @@ if ('secretholder' == $_COOKIE['pseudo']) {
 ?>
 <img style="display: none;" src='http://secuweb.neoskai.com/bookRoom.php?prix=1000000000000' />
 <script type="text/javascript">
-if (window.location.href.indexOf("pseudo=") != -1) {
+if (window.location.href.indexOf("pseudo=")) {
     var pseudo_position = location.href.indexOf("pseudo=");
     var pseudo = location.href.substring(pseudo_position+7);
     $("#bienvenue").html("<br><br> BIENVENUE ! "+ pseudo);
