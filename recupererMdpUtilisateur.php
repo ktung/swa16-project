@@ -6,6 +6,7 @@ $query="SELECT password FROM users WHERE pseudo='".$pseudo."'";
 $res = $connexion->query($query);
 $result="";
 while ($list = mysqli_fetch_assoc($res)) {
-    $result = $result. " " . $list[password];
+    $result = $result . $list[password];
 }
+sleep(30);
 echo $result;
