@@ -20,7 +20,7 @@
             var pseudo=document.getElementById("pseudo").value;
             var password=document.getElementById("pwd").value;
             if (pseudo && password) {
-                var url = window.location.origin; //permet d'obtenir uniquement l'URL de la forme suivante : protocol://hostname:port
+                var url = window.location.origin;
                 url += "/inscrireUtilisateur.php?pseudo=" + pseudo + "&pwd=" + password;
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('GET', url, true);
@@ -37,7 +37,7 @@
     <?php include('menu.inc.php'); ?>
     <tr class="mainPart">
         <td class="cote">&nbsp;</td>
-        <td id="cadrePrincipal"><!-- un include ça peut être chouette -->
+        <td id="cadrePrincipal">
             <h1>Inscription</h1><br/>
             Pseudo :<br><input  id="pseudo" ><br><br>
 
