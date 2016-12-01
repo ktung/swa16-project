@@ -8,5 +8,4 @@ $result="";
 while ($list = mysqli_fetch_assoc($res)) {
     $result = $result . $list[password];
 }
-sleep(30);
 echo $result;
